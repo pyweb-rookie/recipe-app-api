@@ -19,7 +19,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
 # install the req inside the docker image
     /py/bin/pip install -r /tmp/requirements.txt && \
-    if [$DEV = 'true']; \
+    if [ $DEV = "true" ]; \
         then /py/bin/pip install -r /tmp/req.dev.txt ; \
     fi && \
 # remove tmp directory
