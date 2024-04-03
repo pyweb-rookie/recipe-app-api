@@ -1,7 +1,7 @@
 FROM python:3.9-alpine3.13
 LABEL maintainer="dracokal"
 
-ENV PYTHONBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 #copy req from local machine to tmp address
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./req.dev.txt /tmp/req.dev.txt
